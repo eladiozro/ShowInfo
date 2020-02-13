@@ -12,11 +12,11 @@ public class ShowTitleAttribute : PropertyAttribute
     {
         // ONLY TEXT
         writing = write;
-        ConfigStyle(ShowTitleStyle.BoldSmall);
-        ConfigColor(ShowTitleColor.GrayLight);
+        ConfigStyle(ShowTitleStyle.NormalSmallBox);
+        ConfigColor(ShowTitleColor.White);
         
         fontSize = 11;
-        textAnchor = TextAnchor.MiddleCenter;
+        textAnchor = TextAnchor.MiddleLeft;
     }
     public ShowTitleAttribute(string write, ShowTitleColor color)
     {

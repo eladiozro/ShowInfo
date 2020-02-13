@@ -9,7 +9,7 @@ public class ShowTitleDrawer : DecoratorDrawer
     {
         ShowTitleAttribute s = (ShowTitleAttribute)attribute;
         
-        Rect box = new Rect(position.x + 15, position.y + 1, position.width - 30, position.height / 1.45f);
+        Rect box = new Rect(position.x + 17, position.y + 1, position.width - 34, position.height / 1.2f);
         if (s.showBox)
         {
             GUI.Box(box, "");
@@ -26,6 +26,6 @@ public class ShowTitleDrawer : DecoratorDrawer
     public override float GetHeight()
     {
         ShowTitleAttribute s = (ShowTitleAttribute)attribute;
-        return base.GetHeight() + 2 + s.fontSize;
+        return base.GetHeight() + s.fontSize - 4;
     }
 }
