@@ -27,25 +27,25 @@ public class ShowTitleAttribute : PropertyAttribute
         fontSize = 11;
         textAnchor = TextAnchor.MiddleCenter;
     }
-    public ShowTitleAttribute(string write, ShowTitleStyle style, ShowTitleColor color)
+    public ShowTitleAttribute(string write, ShowTitleColor color, ShowTitleStyle style)
     {
-        // STYLE COLOR
+        // COLOR STYLE 
         writing = write;
         ConfigStyle(style);
         ConfigColor(color);
         textAnchor = TextAnchor.MiddleCenter;
     }
-    public ShowTitleAttribute(string write, ShowTitleStyle style, ShowTitleColor color, TextAnchor anchor)
+    public ShowTitleAttribute(string write, ShowTitleColor color, ShowTitleStyle style, TextAnchor anchor)
     {
-        // STYLE COLOR ANCHOR
+        // COLOR STYLE ANCHOR
         writing = write;
         ConfigStyle(style);
         ConfigColor(color);
         textAnchor = anchor;
     }
-    public ShowTitleAttribute(string write, ShowTitleStyle style, float _r, float _g, float _b, TextAnchor anchor, int fSize)
+    public ShowTitleAttribute(string write, float _r, float _g, float _b, ShowTitleStyle style, TextAnchor anchor, int fSize)
     {
-        // STYLE R G B ANCHOR FONTSIZE 
+        // R G B STYLE ANCHOR FONTSIZE 
         writing = write;
         ConfigStyle(style);
         SetColor(_r, _g, _b);
