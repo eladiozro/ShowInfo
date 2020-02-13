@@ -9,7 +9,7 @@ public class ShowTitleDrawer : DecoratorDrawer
     {
         ShowTitleAttribute s = (ShowTitleAttribute)attribute;
         
-        Rect box = new Rect(position.x, position.y + 1, position.width, position.height / 1.45f);
+        Rect box = new Rect(position.x + 15, position.y + 1, position.width - 30, position.height / 1.45f);
         if (s.showBox)
         {
             GUI.Box(box, "");
@@ -19,7 +19,7 @@ public class ShowTitleDrawer : DecoratorDrawer
         style.alignment = s.textAnchor;
         style.fontSize = s.fontSize;
         style.normal.textColor = new Color(s.r,s.g,s.b);
-        box = new Rect(box.x, box.y, box.width, box.height);
+        box = new Rect(box.x + 15, box.y, box.width - 30, box.height);
         GUI.Label(box, s.writing, style);
     }
 
