@@ -30,15 +30,19 @@ It is a nicer header to add to your Unity Components.
 
 <p align="center"> #6 (SET ANCHOR) </p>
 
-[](Plugins/ShowTitleHeader/Samples/6A.png)
-[](Plugins/ShowTitleHeader/Samples/6B.png)
+![](Plugins/ShowTitleHeader/Samples/6A.png)
+![](Plugins/ShowTitleHeader/Samples/6B.png)
 
 <p align="center"> #7 (COLOR, STYLE AND ANCHOR) </p>
 
-[](Plugins/ShowTitleHeader/Samples/7A.png)
-[](Plugins/ShowTitleHeader/Samples/7B.png)
+![](Plugins/ShowTitleHeader/Samples/7A.png)
+![](Plugins/ShowTitleHeader/Samples/7B.png)
 
 <p align="center"> #8 (R, G, B, STYLE, ANCHOR AND FONT SIZE) </p>
 
-[](Plugins/ShowTitleHeader/Samples/8A.png)
-[](Plugins/ShowTitleHeader/Samples/8B.png)
+![](Plugins/ShowTitleHeader/Samples/8A.png)
+![](Plugins/ShowTitleHeader/Samples/8B.png)
+
+
+
+
