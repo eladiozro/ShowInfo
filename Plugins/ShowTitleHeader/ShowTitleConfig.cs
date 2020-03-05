@@ -10,6 +10,7 @@ public class ShowTitleAttribute : PropertyAttribute
     public bool showBox;
     public ShowTitleAttribute(string write)
     {
+#if UNITY_EDITOR
         // ONLY TEXT
         writing = write;
         ConfigStyle(ShowTitleStyle.NormalSmallBox);
@@ -17,49 +18,61 @@ public class ShowTitleAttribute : PropertyAttribute
         
         fontSize = 11;
         textAnchor = TextAnchor.MiddleLeft;
+#endif
     }
-    public ShowTitleAttribute(string write, ShowTitleColor color)
+    public ShowTitleAttribute(string write, ShowTitleStyle style)
     {
-        // COLOR
+#if UNITY_EDITOR
+        // STYLE
         writing = write;
-        ConfigStyle(ShowTitleStyle.BoldSmall);
-        ConfigColor(color);
+        ConfigStyle(style);
+        ConfigColor(ShowTitleColor.White);
         fontSize = 11;
-        textAnchor = TextAnchor.MiddleCenter;
+        textAnchor = TextAnchor.MiddleLeft;
+#endif
     }
-    public ShowTitleAttribute(string write, ShowTitleColor color, ShowTitleStyle style)
+    public ShowTitleAttribute(string write, ShowTitleStyle style, ShowTitleColor color)
     {
-        // COLOR STYLE 
+#if UNITY_EDITOR
+        // STYLE COLOR 
         writing = write;
         ConfigStyle(style);
         ConfigColor(color);
-        textAnchor = TextAnchor.MiddleCenter;
+        textAnchor = TextAnchor.MiddleLeft;
+#endif
     }
-    public ShowTitleAttribute(string write, ShowTitleColor color, ShowTitleStyle style, TextAnchor anchor)
+    public ShowTitleAttribute(string write, ShowTitleStyle style, ShowTitleColor color, TextAnchor anchor)
     {
-        // COLOR STYLE ANCHOR
+#if UNITY_EDITOR
+        // STYLE COLOR ANCHOR
         writing = write;
         ConfigStyle(style);
         ConfigColor(color);
         textAnchor = anchor;
+#endif
     }
-    public ShowTitleAttribute(string write, float _r, float _g, float _b, ShowTitleStyle style, TextAnchor anchor, int fSize)
+    public ShowTitleAttribute(string write, ShowTitleStyle style, float _r, float _g, float _b, TextAnchor anchor, int fSize)
     {
-        // R G B STYLE ANCHOR FONTSIZE 
+#if UNITY_EDITOR
+        // STYLE R G B ANCHOR FONTSIZE 
         writing = write;
         ConfigStyle(style);
         SetColor(_r, _g, _b);
         fontSize = fSize;
         textAnchor = anchor;
+#endif
     }
     void SetColor(float _r, float _g, float _b)
     {
+#if UNITY_EDITOR
         r = _r;
         g = _g;
         b = _b;
+#endif
     }
     void ConfigStyle(ShowTitleStyle config)
     {
+#if UNITY_EDITOR
         switch ((int)config)
         {
             // Normal
@@ -99,9 +112,11 @@ public class ShowTitleAttribute : PropertyAttribute
             case 30: fontSize = 18; fontStyle = FontStyle.BoldAndItalic; showBox = true; break;
             case 31: fontSize = 25; fontStyle = FontStyle.BoldAndItalic; showBox = true; break;
         }
+#endif
     }
     void ConfigColor(ShowTitleColor colors)
     {
+#if UNITY_EDITOR
         // print((int)colors);
         switch ((int)colors)
         {
@@ -127,5 +142,6 @@ public class ShowTitleAttribute : PropertyAttribute
             case 19: SetColor(1.00f, 0.00f, 1.00f); break; // Magenta
             case 20: SetColor(0.50f, 0.00f, 1.00f); break; // Indigo
         }
+#endif
     }
 }
