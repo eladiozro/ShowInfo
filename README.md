@@ -1,4 +1,4 @@
-# ShowTitleHeader
+# Show Info Text Header Hint
 A nicer header to add to your Unity Components.
 
 # How To Use 
